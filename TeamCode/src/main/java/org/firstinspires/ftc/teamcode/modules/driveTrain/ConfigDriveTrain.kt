@@ -10,6 +10,5 @@ object ConfigDriveTrain {
     }
 
     object Drive {
-        @JvmField var 
     }
 }

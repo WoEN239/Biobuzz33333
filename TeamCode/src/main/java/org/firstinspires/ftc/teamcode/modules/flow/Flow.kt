@@ -11,4 +11,4 @@ class Flow(private val flowMotor: Motor) {
         flowMotor.setPower(ConfigFlow.power)
     }
 
-}dd
+}

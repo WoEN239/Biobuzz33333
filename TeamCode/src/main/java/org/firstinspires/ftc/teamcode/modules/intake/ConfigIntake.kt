@@ -9,8 +9,4 @@ object ConfigIntake {
         @JvmField var maxAmps: Double = 3.0
         @JvmField var backPower: Double = -0.3
     }
-
-    object Side {
-        @JvmField var power: Double = 1.0
-    }
 }

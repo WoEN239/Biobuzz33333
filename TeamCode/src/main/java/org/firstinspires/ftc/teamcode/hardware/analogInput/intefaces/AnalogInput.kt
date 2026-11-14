@@ -1,5 +1,5 @@
 package org.firstinspires.ftc.teamcode.hardware.analogInput.intefaces
 
-internal interface AnalogInput {
+interface AnalogInput {
     val value: Double
 }

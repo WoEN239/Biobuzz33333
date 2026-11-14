@@ -1,7 +1,6 @@
 package org.firstinspires.ftc.teamcode.modules.driveTrain
 
 import com.qualcomm.hardware.gobilda.GoBildaPinpointDriver
-import com.qualcomm.robotcore.hardware.IMU
 import org.firstinspires.ftc.teamcode.hardware.motor.interfaces.Motor
 import kotlin.math.abs
 import kotlin.math.cos
@@ -15,6 +14,13 @@ class DriveTrain(private val leftFront: Motor, private val rightFront: Motor,
         val yawRad = Math.toRadians(yawDeg)
         val powerXRobot: Double = powerXField * cos(yawRad) - powerYField * sin(yawRad)
         val powerYRobot: Double = powerXField * sin(yawRad) + powerYField * cos(yawRad)
+        return doubleArrayOf(powerXRobot, powerYRobot)
+    }
+
+    fun fieldToRobotPowers(powerXField: Double, powerYField: Double, yawDeg: Double): DoubleArray? {
+        val yawRad = Math.toRadians(yawDeg)
+        val powerXRobot = powerXField * cos(yawRad) - powerYField * sin(yawRad)
+        val powerYRobot = powerXField * sin(yawRad) + powerYField * cos(yawRad)
         return doubleArrayOf(powerXRobot, powerYRobot)
     }
 
